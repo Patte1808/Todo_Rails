@@ -1,0 +1,13 @@
+<li class="collection-item todo_<%= todo.id %> <%= todo.is_done ? 'done' : '' %>">
+  <div>
+    <%= link_to todo.title, todo_path(todo) %>
+    <a href="#" class="secondary-content">
+
+    </a>
+
+    <div class="secondary-content">
+      <%= link_to 'Mark as complete', complete_todo_path(todo), remote: true, :method => :put %>
+      <%= link_to 'Delete', todo, remote: true, :method => :delete %>
+    </div>
+  </div>
+</li>

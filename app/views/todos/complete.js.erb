@@ -1,0 +1,1 @@
+$('.todo_list li.todo_<%= @todo.id %>').replaceWith("<%= j render partial: 'todo', locals: {todo: @todo} %>");
